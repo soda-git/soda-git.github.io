@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>呼伦贝尔房车亲子游规划 - 2025年7月19日-26日</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #e8f5e8 0%, #f0f8ff 100%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #4CAF50 0%, #2196F3 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .section {
+            background: white;
+            margin: 20px 0;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border-left: 5px solid #4CAF50;
+        }
+        
+        .section h2 {
+            color: #2c5530;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        
+        .section h3 {
+            color: #4CAF50;
+            font-size: 1.4em;
+            margin: 20px 0 10px 0;
+        }
+        
+        .section h4 {
+            color: #666;
+            font-size: 1.2em;
+            margin: 15px 0 8px 0;
+        }
+        
+        .day-card {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 4px solid #2196F3;
+        }
+        
+        .day-title {
+            color: #2196F3;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .highlight {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        
+        .warning {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        
+        .info {
+            background: #d1ecf1;
+            border: 1px solid #bee5eb;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .price {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        
+        .link {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .link:hover {
+            text-decoration: underline;
+        }
+        
+        .location-link {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .location-link:hover {
+            text-decoration: underline;
+            color: #2980b9;
+        }
+        
+        .route-link {
+            background: linear-gradient(135deg, #4CAF50 0%, #2196F3 100%);
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin: 5px;
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+        
+        .route-link:hover {
+            transform: translateY(-2px);
+            text-decoration: none;
+            color: white;
+        }
+        
+        .full-route-button {
+            background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1.1em;
+            font-weight: bold;
+            margin: 20px auto;
+            display: block;
+            text-align: center;
+            max-width: 300px;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .full-route-button:hover {
+            transform: translateY(-3px);
+            text-decoration: none;
+            color: white;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        .route-map {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .route-map img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-top: 3px solid #4CAF50;
+        }
+        
+        .card h4 {
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚐 呼伦贝尔房车亲子游规划</h1>
+            <p>2025年7月19日 - 7月26日 | 一家三口的草原之旅</p>
+        </div>
+
+        <div class="section">
+            <h2>📋 行程概览</h2>
+            <div class="info">
+                <strong>出行人员：</strong>一家三口，孩子5岁<br>
+                <strong>交通方式：</strong>房车（2025年7月19日15点 到 2025年7月26日12点）<br>
+                <strong>主要景点：</strong><span class="location-link" onclick="openLocation('阿尔山市', '119.943577,47.177440')">阿尔山</span>、<span class="location-link" onclick="openLocation('呼伦湖', '117.685074,49.465504')">呼伦湖</span>、<span class="location-link" onclick="openLocation('莫日格勒河', '119.779039,49.511658')">莫日格勒河</span>、国界河（<span class="location-link" onclick="openLocation('室韦', '119.896125,51.335896')">室韦</span>、<span class="location-link" onclick="openLocation('黑山头镇', '119.578421,50.215588')">黑山头</span>）
+            </div>
+            <p>本次行程将围绕呼伦贝尔的精华景点展开，兼顾房车出行的便利性和亲子游的舒适性。考虑到5岁孩子的出行节奏，我们将尽量避免长时间驾驶，并安排轻松愉快的活动。</p>
+            
+            <a href="javascript:void(0)" onclick="openFullRoute()" class="full-route-button">
+                🗺️ 查看完整行程路线图
+            </a>
+        </div>
+
+        <div class="section">
+            <h2>🗺️ 路线地图</h2>
+            <div class="route-map">
+                <img src="assets/images/hulunbeier_route_map.png" alt="呼伦贝尔旅游路线地图">
+                <p><em>呼伦贝尔房车亲子游路线图</em></p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📅 详细行程安排</h2>
+            
+            <div class="day-card">
+                <div class="day-title">Day 1: 7月19日 (周六) - <span class="location-link" onclick="openLocation('海拉尔区', '119.816157,49.246205')">海拉尔</span>抵达与房车准备</div>
+                <ul>
+                    <li><strong>下午：</strong>15:00 抵达<span class="location-link" onclick="openLocation('海拉尔东山机场', '119.816157,49.246205')">海拉尔东山机场</span>，办理房车租赁手续并取车。熟悉房车内部设施及驾驶。</li>
+                    <li><strong>傍晚：</strong>在<span class="location-link" onclick="openLocation('海拉尔区', '119.816157,49.246205')">海拉尔市区</span>采购未来几天的食材和生活用品，特别是适合孩子食用的零食和饮品。</li>
+                    <li><strong>住宿：</strong><span class="location-link" onclick="openLocation('海拉尔区', '119.816157,49.246205')">海拉尔市区</span>房车营地或指定停车场</li>
+                    <li><strong>餐饮：</strong>晚餐可在<span class="location-link" onclick="openLocation('海拉尔区', '119.816157,49.246205')">海拉尔市区</span>品尝当地特色美食，如涮羊肉、烤羊腿等</li>
+                </ul>
+            </div>
+
+            <div class="day-card">
+                <div class="day-title">Day 2: 7月20日 (周日) - <span class="location-link" onclick="openLocation('海拉尔区', '119.816157,49.246205')">海拉尔</span> → <span class="location-link" onclick="openLocation('莫日格勒河', '119.779039,49.511658')">莫日格勒河</span> → <span class="location-link" onclick="openLocation('额尔古纳市', '120.180506,50.243102')">额尔古纳</span></div>
+                <div style="margin-bottom: 15px;">
+                    <a href="javascript:void(0)" onclick="openRoute('119.816157,49.246205', '119.779039,49.511658', '海拉尔东山机场', '莫日格勒河')" class="route-link">🚗 海拉尔→莫日格勒河 导航</a>
+                    <a href="javascript:void(0)" onclick="openRoute('119.779039,49.511658', '120.180506,50.243102', '莫日格勒河', '额尔古纳市')" class="route-link">🚗 莫日格勒河→额尔古纳 导航</a>
+                </div>
+                <ul>
+                    <li><strong>上午：</strong>前往<span class="location-link" onclick="openLocation('莫日格勒河', '119.779039,49.511658')">莫日格勒河</span>，被誉为"天下第一曲水"，在至高点观景台欣赏全景</li>
+                    <li><strong>中午：</strong>在<span class="location-link" onclick="openLocation('莫日格勒河', '119.779039,49.511658')">莫日格勒河</span>附近或前往<span class="location-link" onclick="openLocation('额尔古纳市', '120.180506,50.243102')">额尔古纳</span>途中解决午餐</li>
+                    <li><strong>下午：</strong>前往<span class="location-link" onclick="openLocation('额尔古纳市', '120.180506,50.243102')">额尔古纳</span>，游览<span class="location-link" onclick="openLocation('额尔古纳湿地公园', '120.180506,50.243102')">额尔古纳湿地公园</span>（亚洲第一湿地）</li>
+                    <li><strong>住宿：</strong><span class="location-link" onclick="openLocation('额尔古纳市', '120.180506,50.243102')">额尔古纳</span>房车营地或指定停车场</li>
+                </ul>
+                <div class="warning">
+                    <strong>房车注意事项：</strong><span class="location-link" onclick="openLocation('莫日格勒河', '119.779039,49.511658')">莫日格勒河</span>景区内道路可能禁止停车，需将房车停放在指定停车场，然后步行或乘坐景区交通工具游览。
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-title">Day 3: 7月21日 (周一) - <span class="location-link" onclick="openLocation('额尔古纳市', '120.180506,50.243102')">额尔古纳</span> → <span class="location-link" onclick="openLocation('恩和俄罗斯民族乡', '119.926496,50.823064')">恩和</span> → <span class="location-link" onclick="openLocation('室韦', '119.896125,51.335896')">室韦</span>/临江</div>
+                <div style="margin-bottom: 15px;">
+                    <a href="javascript:void(0)" onclick="openRoute('120.180506,50.243102', '119.926496,50.823064', '额尔古纳市', '恩和俄罗斯民族乡')" class="route-link">🚗 额尔古纳→恩和 导航</a>
+                    <a href="javascript:void(0)" onclick="openRoute('119.926496,50.823064', '119.896125,51.335896', '恩和俄罗斯民族乡', '室韦')" class="route-link">🚗 恩和→室韦 导航</a>
+                </div>
+                <ul>
+                    <li><strong>上午：</strong>沿着边境公路前往<span class="location-link" onclick="openLocation('恩和俄罗斯民族乡', '119.926496,50.823064')">恩和俄罗斯民族乡</span>，感受俄罗斯民族风情</li>
+                    <li><strong>中午：</strong>在<span class="location-link" onclick="openLocation('恩和俄罗斯民族乡', '119.926496,50.823064')">恩和</span>解决午餐，品尝俄罗斯大列巴、蓝莓酱等</li>
+                    <li><strong>下午：</strong>继续前往<span class="location-link" onclick="openLocation('室韦', '119.896125,51.335896')">室韦</span>或<span class="location-link" onclick="openLocation('临江', '119.896125,51.335896')">临江</span>，欣赏界河风光，可考虑乘坐界河游船</li>
+                    <li><strong>住宿：</strong><span class="location-link" onclick="openLocation('室韦', '119.896125,51.335896')">室韦</span>或<span class="location-link" onclick="openLocation('临江', '119.896125,51.335896')">临江</span>房车营地或指定停车场</li>
+                </ul>
+            </div>
+
+            <div class="day-card">
+                <div class="day-title">Day 4: 7月22日 (周二) - <span class="location-link" onclick="openLocation('室韦', '119.896125,51.335896')">室韦</span>/临江 → <span class="location-link" onclick="openLocation('黑山头镇', '119.578421,50.215588')">黑山头</span></div>
+                <div style="margin-bottom: 15px;">
+                    <a href="javascript:void(0)" onclick="openRoute('119.896125,51.335896', '119.578421,50.215588', '室韦', '黑山头镇')" class="route-link">🚗 室韦→黑山头 导航</a>
+                </div>
+                <ul>
+                    <li><strong>上午：</strong>沿边境公路（卡线）前往<span class="location-link" onclick="openLocation('黑山头镇', '119.578421,50.215588')">黑山头</span>，沿途风光优美</li>
+                    <li><strong>下午：</strong>抵达<span class="location-link" onclick="openLocation('黑山头镇', '119.578421,50.215588')">黑山头</span>，体验骑马（有适合儿童的骑乘项目）</li>
+                    <li><strong>傍晚：</strong>观看<span class="location-link" onclick="openLocation('黑山头镇', '119.578421,50.215588')">黑山头</span>日落（最佳观赏点在黑山头口岸附近或制高点）</li>
+                    <li><strong>住宿：</strong><span class="location-link" onclick="openLocation('黑山头镇', '119.578421,50.215588')">黑山头</span>房车营地或指定停车场</li>
+                </ul>
+            </div>
+
+            <div class="day-card">
+                <div class="day-title">Day 5: 7月23日 (周三) - <span class="location-link" onclick="openLocation('黑山头镇', '119.578421,50.215588')">黑山头</span> → <span class="location-link" onclick="openLocation('满洲里市', '117.379134,49.598620')">满洲里</span> → <span class="location-link" onclick="openLocation('呼伦湖', '117.685074,49.465504')">呼伦湖</span></div>
+                <div style="margin-bottom: 15px;">
+                    <a href="javascript:void(0)" onclick="openRoute('119.578421,50.215588', '117.379134,49.598620', '黑山头镇', '满洲里市')" class="route-link">🚗 黑山头→满洲里 导航</a>
+                    <a href="javascript:void(0)" onclick="openRoute('117.379134,49.598620', '117.685074,49.465504', '满洲里市', '呼伦湖')" class="route-link">🚗 满洲里→呼伦湖 导航</a>
+                </div>
+                <ul>
+                    <li><strong>上午：</strong>前往<span class="location-link" onclick="openLocation('满洲里市', '117.379134,49.598620')">满洲里</span>，参观<span class="location-link" onclick="openLocation('满洲里国门景区', '117.379134,49.598620')">国门景区</span>和<span class="location-link" onclick="openLocation('满洲里套娃广场', '117.379134,49.598620')">套娃广场</span></li>
+                    <li><strong>中午：</strong>在<span class="location-link" onclick="openLocation('满洲里市', '117.379134,49.598620')">满洲里市区</span>解决午餐，选择俄式西餐或中餐</li>
+                    <li><strong>下午：</strong>前往<span class="location-link" onclick="openLocation('呼伦湖', '117.685074,49.465504')">呼伦湖</span>，在湖边散步，欣赏湖光山色</li>
+                    <li><strong>住宿：</strong><span class="location-link" onclick="openLocation('满洲里市', '117.379134,49.598620')">满洲里</span>或<span class="location-link" onclick="openLocation('呼伦湖', '117.685074,49.465504')">呼伦湖</span>附近房车营地或指定停车场</li>
+                </ul>
+                <div class="warning">
+                    <strong>房车注意事项：</strong><span class="location-link" onclick="openLocation('呼伦湖', '117.685074,49.465504')">呼伦湖</span>核心区禁止车辆进入，禁止露营野炊。需将房车停放在指定区域。
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-title">Day 6: 7月24日 (周四) - <span class="location-link" onclick="openLocation('满洲里市', '117.379134,49.598620')">满洲里</span>/<span class="location-link" onclick="openLocation('呼伦湖', '117.685074,49.465504')">呼伦湖</span> → <span class="location-link" onclick="openLocation('阿尔山市', '119.943577,47.177440')">阿尔山</span></div>
+                <div style="margin-bottom: 15px;">
+                    <a href="javascript:void(0)" onclick="openRoute('117.685074,49.465504', '119.943577,47.177440', '呼伦湖', '阿尔山市')" class="route-link">🚗 呼伦湖→阿尔山 导航</a>
+                </div>
+                <ul>
+                    <li><strong>上午：</strong>从<span class="location-link" onclick="openLocation('满洲里市', '117.379134,49.598620')">满洲里</span>/<span class="location-link" onclick="openLocation('呼伦湖', '117.685074,49.465504')">呼伦湖</span>出发，前往<span class="location-link" onclick="openLocation('阿尔山市', '119.943577,47.177440')">阿尔山</span>（路程较长，需合理安排休息）</li>
+                    <li><strong>中午：</strong>在途中或抵达<span class="location-link" onclick="openLocation('阿尔山市', '119.943577,47.177440')">阿尔山市区</span>解决午餐</li>
+                    <li><strong>下午：</strong>抵达<span class="location-link" onclick="openLocation('阿尔山市', '119.943577,47.177440')">阿尔山市区</span>，可选择在<span class="location-link" onclick="openLocation('金江房车度假营地', '119.943577,47.177440')">金江房车度假营地</span>安顿房车</li>
+                    <li><strong>住宿：</strong><span class="location-link" onclick="openLocation('阿尔山市', '119.943577,47.177440')">阿尔山市区</span>房车营地（如<span class="location-link" onclick="openLocation('金江房车度假营地', '119.943577,47.177440')">金江房车度假营地</span>）</li>
+                </ul>
+            </div>
+
+            <div class="day-card">
+                <div class="day-title">Day 7: 7月25日 (周五) - <span class="location-link" onclick="openLocation('阿尔山国家森林公园', '119.943577,47.177440')">阿尔山国家森林公园</span></div>
+                <ul>
+                    <li><strong>全天：</strong>游览<span class="location-link" onclick="openLocation('阿尔山国家森林公园', '119.943577,47.177440')">阿尔山国家森林公园</span>，主要景点包括<span class="location-link" onclick="openLocation('阿尔山天池', '119.943577,47.177440')">天池</span>、<span class="location-link" onclick="openLocation('阿尔山地池', '119.943577,47.177440')">地池</span>、<span class="location-link" onclick="openLocation('石塘林', '119.943577,47.177440')">石塘林</span>、<span class="location-link" onclick="openLocation('杜鹃湖', '119.943577,47.177440')">杜鹃湖</span>、<span class="location-link" onclick="openLocation('驼峰岭天池', '119.943577,47.177440')">驼峰岭天池</span>、<span class="location-link" onclick="openLocation('三潭峡', '119.943577,47.177440')">三潭峡</span>等</li>
+                    <li><strong>住宿：</strong><span class="location-link" onclick="openLocation('阿尔山市', '119.943577,47.177440')">阿尔山市区</span>房车营地（如<span class="location-link" onclick="openLocation('金江房车度假营地', '119.943577,47.177440')">金江房车度假营地</span>）</li>
+                </ul>
+                <div class="warning">
+                    <strong>房车注意事项：</strong><span class="location-link" onclick="openLocation('阿尔山国家森林公园', '119.943577,47.177440')">阿尔山国家森林公园</span>内收费景点禁止私家车（包括房车）进入，需将房车停放在金江沟门区、柴河源门区、兴安服务区、天池服务区等指定停车场，然后换乘景区观光车游览。
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-title">Day 8: 7月26日 (周六) - <span class="location-link" onclick="openLocation('阿尔山市', '119.943577,47.177440')">阿尔山</span> → <span class="location-link" onclick="openLocation('海拉尔区', '119.816157,49.246205')">海拉尔</span>，返程</div>
+                <div style="margin-bottom: 15px;">
+                    <a href="javascript:void(0)" onclick="openRoute('119.943577,47.177440', '119.816157,49.246205', '阿尔山市', '海拉尔东山机场')" class="route-link">🚗 阿尔山→海拉尔 导航</a>
+                </div>
+                <ul>
+                    <li><strong>上午：</strong>从<span class="location-link" onclick="openLocation('阿尔山市', '119.943577,47.177440')">阿尔山</span>出发，返回<span class="location-link" onclick="openLocation('海拉尔区', '119.816157,49.246205')">海拉尔</span>（路程较长，预留充足时间）</li>
+                    <li><strong>中午：</strong>12:00前在<span class="location-link" onclick="openLocation('海拉尔区', '119.816157,49.246205')">海拉尔</span>归还房车</li>
+                    <li><strong>下午：</strong>13:00 从<span class="location-link" onclick="openLocation('海拉尔东山机场', '119.816157,49.246205')">海拉尔东山机场</span>出发，结束愉快的呼伦贝尔房车之旅</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🎫 景点门票信息</h2>
+            <div class="grid">
+                <div class="card">
+                    <h4>阿尔山国家森林公园</h4>
+                    <p><span class="price">门票+观光车：275-285元/人</span></p>
+                    <p>儿童（1.2米以下免费，1.2米以上半价）</p>
+                    <p>老年人（70周岁以上免费，65-69周岁半价）</p>
+                    <p><a href="#" class="link">携程等OTA平台购买</a></p>
+                </div>
+                
+                <div class="card">
+                    <h4>呼伦湖</h4>
+                    <p><span class="price">成人票：38-53元/人</span></p>
+                    <p>部分包含观光车</p>
+                    <p><a href="#" class="link">去哪儿网等平台购买</a></p>
+                </div>
+                
+                <div class="card">
+                    <h4>莫日格勒河</h4>
+                    <p><span class="price">门票：约90元+班车20元</span></p>
+                    <p>价格不一，建议提前咨询</p>
+                    <p><a href="#" class="link">Trip.com等平台购买</a></p>
+                </div>
+                
+                <div class="card">
+                    <h4>满洲里国门景区</h4>
+                    <p><span class="price">成人票：60-75元/人</span></p>
+                    <p>含或不含观光车</p>
+                    <p>儿童、老年人有优惠</p>
+                </div>
+                
+                <div class="card">
+                    <h4>满洲里套娃广场</h4>
+                    <p><span class="price">成人票：50-148元/人</span></p>
+                    <p>价格浮动较大，部分包含游乐设施</p>
+                    <p>儿童、学生、老年人有优待票</p>
+                </div>
+            </div>
+            <div class="highlight">
+                <strong>重要提示：</strong>景点门票价格和政策可能随季节或时间调整，请在出行前务必通过官方渠道或OTA平台再次确认最新信息并提前预订，特别是旺季。
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🍽️ 餐饮推荐</h2>
+            <p>呼伦贝尔地区以蒙餐和东北菜为主，牛羊肉和奶制品是特色。考虑到亲子出行，以下是一些建议：</p>
+            
+            <div class="grid">
+                <div class="card">
+                    <h4>海拉尔</h4>
+                    <ul>
+                        <li><strong>蒙餐：</strong>涮羊肉、烤羊腿、手把肉、布里亚特包子</li>
+                        <li><strong>推荐：</strong>诺敏塔拉奶茶馆、卢布里西餐厅</li>
+                        <li><strong>亲子餐厅：</strong>尼吉金西餐厅、肉肉的乐园亲子餐厅</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h4>额尔古纳</h4>
+                    <ul>
+                        <li><strong>蒙餐：</strong>手把肉、烤全羊、奶制品</li>
+                        <li><strong>推荐：</strong>草原饭店（手把肉）</li>
+                        <li><strong>特色小吃：</strong>布里亚特包子、列巴、铁山冷饮</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h4>室韦/临江</h4>
+                    <ul>
+                        <li><strong>俄式美食：</strong>列巴、蓝莓果酱、烤鱼</li>
+                        <li><strong>特色：</strong>木刻楞餐厅、俄罗斯家常菜</li>
+                        <li><strong>东北菜：</strong>烧烤、大排档</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h4>黑山头</h4>
+                    <ul>
+                        <li><strong>蒙餐：</strong>烤全羊、烤羊排、手把肉</li>
+                        <li><strong>推荐：</strong>喀秋莎西餐厅（芥末大虾）</li>
+                        <li><strong>特色：</strong>草原烧烤BBQ</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h4>满洲里</h4>
+                    <ul>
+                        <li><strong>俄式西餐：</strong>卢布里西餐厅、尼基金俄餐厅</li>
+                        <li><strong>蒙餐：</strong>烤羊排、手把肉、羊肉火锅</li>
+                        <li><strong>亲子餐厅：</strong>肉肉的乐园亲子餐厅</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h4>阿尔山</h4>
+                    <ul>
+                        <li><strong>当地特色：</strong>山野菜、炖菜</li>
+                        <li><strong>建议：</strong>可在房车内烹饪或寻找当地餐厅</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="info">
+                <h4>🚐 房车餐饮提示：</h4>
+                <ul>
+                    <li>房车内可进行简单烹饪，建议提前采购食材</li>
+                    <li>可准备一些方便食品、零食和饮用水，以应对不时之需</li>
+                    <li>在有房车营地的地方，可以利用营地的设施进行烧烤或野餐</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🚐 房车注意事项总结</h2>
+            <div class="warning">
+                <h4>重要限制：</h4>
+                <ul>
+                    <li><strong>阿尔山国家森林公园：</strong>房车不能直接开到景点，需停放指定停车场后换乘景区观光车。金江房车度假营地可提供停靠和住宿。</li>
+                    <li><strong>呼伦湖：</strong>禁止车辆进入核心区，禁止露营野炊。需将房车停放在指定区域。</li>
+                    <li><strong>莫日格勒河：</strong>景区内道路全线禁止停车，但有房车露营地。</li>
+                    <li><strong>国界河（室韦、黑山头）：</strong>室韦和黑山头都有房车营地。在边境公路行驶时，注意交通规则和边境管理规定。</li>
+                </ul>
+            </div>
+            
+            <div class="info">
+                <h4>安全提示：</h4>
+                <ul>
+                    <li><strong>停车与住宿：</strong>尽量选择有水电补给的房车营地，或提前了解好各地的停车场政策</li>
+                    <li><strong>物资储备：</strong>房车内可储备部分食材、饮用水和常用药品，以备不时之需</li>
+                    <li><strong>儿童安全：</strong>房车行驶过程中，孩子需系好安全带。在营地或野外停车时，注意孩子的活动范围</li>
+                    <li><strong>出行前确认：</strong>部分景区可能对房车有特殊规定，出行前最好再次确认</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📞 紧急联系信息</h2>
+            <div class="highlight">
+                <ul>
+                    <li><strong>紧急救援：</strong>110（报警）、120（急救）、119（消防）</li>
+                    <li><strong>旅游投诉：</strong>12301（全国旅游服务热线）</li>
+                    <li><strong>房车租赁公司：</strong>请保存好租车合同和联系方式</li>
+                    <li><strong>保险公司：</strong>请提前了解旅游保险和车辆保险的理赔流程</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>✅ 出行清单</h2>
+            <div class="grid">
+                <div class="card">
+                    <h4>证件类</h4>
+                    <ul>
+                        <li>身份证（大人、儿童户口本）</li>
+                        <li>驾驶证</li>
+                        <li>房车租赁合同</li>
+                        <li>保险单据</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h4>衣物类</h4>
+                    <ul>
+                        <li>夏季服装（短袖、短裤）</li>
+                        <li>长袖衣物（早晚温差大）</li>
+                        <li>防风外套</li>
+                        <li>舒适的运动鞋</li>
+                        <li>帽子、太阳镜</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h4>日用品</h4>
+                    <ul>
+                        <li>防晒霜（高倍数）</li>
+                        <li>驱蚊液</li>
+                        <li>常用药品</li>
+                        <li>湿纸巾、纸巾</li>
+                        <li>充电器、充电宝</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h4>儿童用品</h4>
+                    <ul>
+                        <li>儿童安全座椅</li>
+                        <li>儿童玩具、绘本</li>
+                        <li>儿童零食</li>
+                        <li>儿童防晒用品</li>
+                        <li>小毯子</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" style="text-align: center; background: linear-gradient(135deg, #4CAF50 0%, #2196F3 100%); color: white;">
+            <h2>🌟 祝您旅途愉快！</h2>
+            <p style="font-size: 1.2em; margin-top: 10px;">愿这次呼伦贝尔房车之旅为您和孩子留下美好的回忆！</p>
+        </div>
+    </div>
+
+    <script>
+        // 检测设备类型
+        function isMobile() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+
+        // 打开单个地点
+        function openLocation(name, coordinates) {
+            const [lon, lat] = coordinates.split(',');
+            
+            if (isMobile()) {
+                // 移动端：尝试打开高德地图APP，如果没有安装则打开网页版
+                const amapAppUrl = `amapuri://viewMap?sourceApplication=webapp&poiname=${encodeURIComponent(name)}&lat=${lat}&lon=${lon}&dev=0`;
+                const webUrl = `https://www.amap.com/search?query=${encodeURIComponent(name)}&city=全国`;
+                
+                // 创建隐藏的iframe尝试打开APP
+                const iframe = document.createElement('iframe');
+                iframe.style.display = 'none';
+                iframe.src = amapAppUrl;
+                document.body.appendChild(iframe);
+                
+                // 设置超时，如果APP没有打开则跳转到网页版
+                setTimeout(() => {
+                    document.body.removeChild(iframe);
+                    window.open(webUrl, '_blank');
+                }, 1000);
+            } else {
+                // PC端：直接打开网页版高德地图
+                const webUrl = `https://www.amap.com/search?query=${encodeURIComponent(name)}&city=全国`;
+                window.open(webUrl, '_blank');
+            }
+        }
+
+        // 打开路线导航
+        function openRoute(origin, destination, originName, destinationName) {
+            const [startLon, startLat] = origin.split(',');
+            const [endLon, endLat] = destination.split(',');
+            
+            if (isMobile()) {
+                // 移动端：尝试打开高德地图APP导航
+                const amapAppUrl = `amapuri://route/plan/?sid=BGVIS1&slat=${startLat}&slon=${startLon}&sname=${encodeURIComponent(originName)}&did=BGVIS2&dlat=${endLat}&dlon=${endLon}&dname=${encodeURIComponent(destinationName)}&dev=0&t=0`;
+                const webUrl = `https://www.amap.com/dir?from=${startLon},${startLat},${encodeURIComponent(originName)}&to=${endLon},${endLat},${encodeURIComponent(destinationName)}&policy=1&src=webapp`;
+                
+                // 创建隐藏的iframe尝试打开APP
+                const iframe = document.createElement('iframe');
+                iframe.style.display = 'none';
+                iframe.src = amapAppUrl;
+                document.body.appendChild(iframe);
+                
+                // 设置超时，如果APP没有打开则跳转到网页版
+                setTimeout(() => {
+                    document.body.removeChild(iframe);
+                    window.open(webUrl, '_blank');
+                }, 1000);
+            } else {
+                // PC端：直接打开网页版路线规划
+                const webUrl = `https://www.amap.com/dir?from=${startLon},${startLat},${encodeURIComponent(originName)}&to=${endLon},${endLat},${encodeURIComponent(destinationName)}&policy=1&src=webapp`;
+                window.open(webUrl, '_blank');
+            }
+        }
+
+        // 打开完整路线图
+        function openFullRoute() {
+            if (isMobile()) {
+                // 移动端：直接打开高德地图URI
+                window.location.href = 'amapuri://workInAmap/createWithToken?polymericId=mcp_76ec626261d84f25b9fc625169a5fd3f&from=MCP';
+            } else {
+                // PC端：打开高德地图网页版，显示呼伦贝尔区域
+                const webUrl = 'https://www.amap.com/search?query=呼伦贝尔&city=内蒙古';
+                window.open(webUrl, '_blank');
+            }
+        }
+
+        // 页面加载完成后的提示
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('呼伦贝尔旅游规划已加载完成！点击地点名称可查看位置，点击导航按钮可获取路线。');
+        });
+    </script>
+</body>
+</html>
+
