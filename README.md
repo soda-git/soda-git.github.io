@@ -8,18 +8,28 @@
 
 ## 使用方法
 
-### 创建用户主页（一级域名访问）
+### 方案一：用户主页（一级域名访问）
 
-1. **重要**：仓库名称必须是 `<username>.github.io`（其中 username 是您的 GitHub 用户名）
+1. **重要**：仓库名称必须是 `soda-git.github.io`
 2. 将项目文件放在仓库根目录
 3. 推送到 GitHub 仓库
 4. GitHub Pages 会自动启用（无需手动配置）
-5. 访问地址：`https://<username>.github.io`
+5. 访问地址：`https://soda-git.github.io`
+
+### 方案二：项目页面（临时方案）
+
+如果遇到问题，可以先使用项目页面：
+
+1. 创建任意名称的仓库（如 `my-website`）
+2. 将项目文件放在仓库根目录
+3. 推送到 GitHub 仓库
+4. 在 Settings → Pages 中手动启用
+5. 访问地址：`https://soda-git.github.io/my-website`
 
 ## 目录结构
 
 ```
-<username>.github.io/  # 仓库名必须是这个格式
+soda-git.github.io/    # 仓库名必须是这个格式
 ├── README.md          # 项目说明
 ├── index.html         # 主页面
 ├── .nojekyll         # 禁用 Jekyll 处理
@@ -40,8 +50,8 @@
    - 选择 Source 为 "Deploy from a branch"
    - 选择分支（通常是 `main`）和目录（通常是 `/root`）
 3. **访问网站**：
-   - **用户主页地址**：`https://<username>.github.io`（一级域名，无需路径）
-   - **项目页面地址**：`https://<username>.github.io/<repository-name>/`（如果仓库名不是 username.github.io）
+   - **用户主页地址**：`https://soda-git.github.io`（一级域名，无需路径）
+   - **项目页面地址**：`https://soda-git.github.io/<repository-name>/`（如果仓库名不是 soda-git.github.io）
    - 部署成功后会在 Pages 设置中显示访问地址
 
 ### 自定义域名配置
