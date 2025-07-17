@@ -88,15 +88,43 @@
 ### 7. 文件组织规范
 ```
 soda-git/
-├── index.html              # 主页
-├── beijing_trip_qrcode.html # 北京行程页面
-├── hulunbeier_travel_guide.html # 呼伦贝尔行程页面
-├── assets/
-│   ├── css/               # CSS文件（如需要）
-│   ├── js/                # JavaScript文件（如需要）
-│   └── images/            # 图片资源
-└── AI_ASSISTANT_RULES.md  # 本规则文档
+├── .gitignore                       # Git忽略文件配置
+├── .nojekyll                        # GitHub Pages配置文件
+├── AI_ASSISTANT_RULES.md            # AI助手规则和项目规范
+├── README.md                        # 项目说明文档
+├── index.html                       # 🏠 主页
+├── travel/                          # 🌍 旅游规划模块
+│   ├── beijing_trip_qrcode.html     # 🏛️ 北京3日游行程页面
+│   └── hulunbeier_travel_guide.html # 🏔️ 呼伦贝尔房车游行程页面
+├── blog/                            # 💻 技术博客模块（预留）
+├── tools/                           # 🛠️ 实用工具模块（预留）
+├── creative/                        # 🎨 创意作品模块（预留）
+└── assets/                          # 静态资源目录
+    ├── css/                         # CSS样式文件（如需要）
+    ├── js/                          # JavaScript脚本文件（如需要）
+    └── images/                      # 图片资源
+        └── hulunbeier_route_map.png # 呼伦贝尔路线图
 ```
+
+#### 功能模块目录说明
+- **travel/** - 旅游规划相关页面
+- **blog/** - 技术博客相关页面（预留）
+- **tools/** - 实用工具相关页面（预留）
+- **creative/** - 创意作品相关页面（预留）
+
+#### 核心页面文件
+- **index.html** - 网站主页，展示所有功能模块
+- **功能页面** - 按类型分目录组织，使用下划线分隔
+
+#### 资源文件组织
+- **assets/css/** - 存放CSS样式文件（目前使用内联样式）
+- **assets/js/** - 存放JavaScript脚本文件（目前使用内联脚本）
+- **assets/images/** - 存放图片资源文件
+
+#### 配置文件
+- **.gitignore** - Git版本控制忽略配置
+- **.nojekyll** - 禁用GitHub Pages的Jekyll处理
+- **AI_ASSISTANT_RULES.md** - AI助手工作规范和项目标准
 
 ### 8. 常用操作模板
 
@@ -178,9 +206,10 @@ soda-git/
 ```
 
 #### 8.2 添加新功能到主页
-1. 在 `.travel-cards` 中添加新卡片
-2. 创建对应的详情页面
-3. 确保链接正确
+1. 在相应的功能模块目录中创建新页面
+2. 在 `index.html` 中添加相应的链接卡片
+3. 确保新页面包含返回主页的链接（使用 `../index.html` 路径）
+4. 确保链接路径正确（如：`travel/页面名.html`）
 
 ### 9. 测试检查清单
 - [ ] 页面在桌面端正常显示
@@ -280,7 +309,7 @@ git push origin master
 ---
 
 **最后更新**: 2024年12月19日
-**版本**: 2.1
+**版本**: 2.2
 **参考风格**: `hulunbeier_travel_guide.html`
-**新增功能**: 发布流程规范、Git操作指导
+**新增功能**: 按类型分目录组织、功能模块化结构、发布流程规范
 **维护者**: AI Assistant & User 
