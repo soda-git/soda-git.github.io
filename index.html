@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soda Code - GitHub Pages</title>
+    <title>Soda Code - 个人主页</title>
     <style>
         * {
             margin: 0;
@@ -12,191 +12,297 @@
         }
         
         body {
-            font-family: 'Arial', 'Microsoft YaHei', sans-serif;
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #e8f5e8 0%, #f0f8ff 100%);
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
         
         .container {
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            text-align: center;
-            max-width: 600px;
-            margin: 20px;
-        }
-        
-        h1 {
-            color: #667eea;
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-        }
-        
-        p {
-            font-size: 1.2em;
-            margin-bottom: 15px;
-            color: #666;
-        }
-        
-        .welcome {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
         }
         
-        .travel-section {
-            margin: 30px 0;
+        .header {
+            background: linear-gradient(135deg, #4CAF50 0%, #2196F3 100%);
+            color: white;
+            padding: 40px 20px;
             text-align: center;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
         }
         
-        .travel-section h2 {
-            color: #333;
+        .header h1 {
+            font-size: 2.5em;
             margin-bottom: 10px;
-            font-size: 2em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
         
-        .travel-cards {
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .section {
+            background: white;
+            margin: 20px 0;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border-left: 5px solid #4CAF50;
+        }
+        
+        .section h2 {
+            color: #2c5530;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        
+        .cards-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
             margin-top: 30px;
         }
         
-        .travel-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 30px;
+        .card {
+            background: white;
             border-radius: 15px;
-            text-align: center;
+            padding: 25px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border-top: 4px solid #4CAF50;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+        
+        .card-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            color: #4CAF50;
+        }
+        
+        .card h3 {
+            color: #2c5530;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        
+        .card p {
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        
+        .card-link {
+            background: linear-gradient(135deg, #4CAF50 0%, #2196F3 100%);
+            color: white;
+            text-decoration: none;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            transition: transform 0.2s;
+            display: inline-block;
+        }
+        
+        .card-link:hover {
+            transform: translateY(-1px);
+            text-decoration: none;
+            color: white;
+        }
+        
+        .travel-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        
+        .travel-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            border-left: 4px solid #2196F3;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
         }
         
         .travel-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.12);
         }
         
-        .card-icon {
-            font-size: 3em;
-            margin-bottom: 15px;
-        }
-        
-        .travel-card h3 {
-            margin-bottom: 15px;
-            font-size: 1.5em;
+        .travel-card h4 {
+            color: #2196F3;
+            margin-bottom: 10px;
+            font-size: 1.2em;
         }
         
         .travel-card p {
-            margin-bottom: 20px;
-            opacity: 0.9;
-            line-height: 1.5;
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.9em;
         }
         
-        .card-link {
-            display: inline-block;
-            background: rgba(255,255,255,0.2);
+        .travel-link {
+            background: linear-gradient(135deg, #2196F3 0%, #4CAF50 100%);
             color: white;
-            padding: 12px 25px;
-            border-radius: 25px;
             text-decoration: none;
+            padding: 6px 15px;
+            border-radius: 15px;
+            font-size: 0.85em;
             font-weight: bold;
-            transition: background 0.3s ease;
-            border: 2px solid rgba(255,255,255,0.3);
+            transition: transform 0.2s;
+            display: inline-block;
         }
         
-        .card-link:hover {
-            background: rgba(255,255,255,0.3);
-            transform: scale(1.05);
+        .travel-link:hover {
+            transform: translateY(-1px);
+            text-decoration: none;
+            color: white;
         }
         
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-top: 40px;
-        }
-        
-        .feature {
-            background: #f8f9fa;
+        .info {
+            background: #d1ecf1;
+            border: 1px solid #bee5eb;
+            border-radius: 8px;
             padding: 20px;
-            border-radius: 10px;
-            border-left: 4px solid #667eea;
+            margin: 20px 0;
         }
         
-        .feature h3 {
-            color: #667eea;
+        .info h3 {
+            color: #2c5530;
             margin-bottom: 10px;
         }
         
         .footer {
+            background: white;
             margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            color: #999;
-            font-size: 0.9em;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            border-left: 5px solid #4CAF50;
+        }
+        
+        .footer p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .update-time {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+            
+            .cards-grid, .travel-cards {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>🥤 Soda Code</h1>
-        
-        <div class="welcome">
-            <h2>欢迎来到 Soda Code</h2>
-            <p>这里是一个基于 GitHub Pages 的静态网站托管空间</p>
+        <div class="header">
+            <h1>🥤 Soda Code</h1>
+            <p>个人主页 | 基于 GitHub Pages 的多功能平台</p>
         </div>
-        
-        <div class="travel-section">
-            <h2>🌍 出游规划</h2>
-            <p>精心策划的旅游线路和行程安排</p>
+
+        <div class="section">
+            <h2>🏠 主要功能</h2>
+            <p>这里是我的个人主页，收录了各种实用的功能和内容</p>
             
-            <div class="travel-cards">
-                <div class="travel-card">
-                    <div class="card-icon">🏛️</div>
-                    <h3>北京3日游</h3>
-                    <p>精选北京经典景点，包含行程二维码和详细路线</p>
-                    <a href="beijing_trip_qrcode.html" class="card-link">查看行程</a>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">🌍</div>
+                    <h3>旅游规划</h3>
+                    <p>专业的旅游线路规划和行程安排，包含详细的导航和实用信息</p>
+                    <a href="#travel-section" class="card-link">查看详情</a>
                 </div>
                 
-                <div class="travel-card">
-                    <div class="card-icon">🏔️</div>
-                    <h3>呼伦贝尔房车游</h3>
-                    <p>2025年7月19-26日呼伦贝尔草原房车亲子游详细规划</p>
-                    <a href="hulunbeier_travel_guide.html" class="card-link">查看行程</a>
+                <div class="card">
+                    <div class="card-icon">💻</div>
+                    <h3>技术博客</h3>
+                    <p>分享编程技术、开发经验和学习心得</p>
+                    <a href="#" class="card-link">即将推出</a>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">🎨</div>
+                    <h3>创意作品</h3>
+                    <p>展示各种创意项目和设计作品</p>
+                    <a href="#" class="card-link">即将推出</a>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">🛠️</div>
+                    <h3>实用工具</h3>
+                    <p>收录各种实用的在线工具和小程序</p>
+                    <a href="#" class="card-link">即将推出</a>
                 </div>
             </div>
         </div>
-        
-        <div class="features">
-            <div class="feature">
-                <h3>🚀 快速访问</h3>
-                <p>通过 GitHub Pages 随时随地访问旅游规划</p>
-            </div>
+
+        <div class="section" id="travel-section">
+            <h2>🌍 旅游规划</h2>
+            <p>精心策划的旅游线路，让每一次出行都成为美好回忆</p>
             
-            <div class="feature">
-                <h3>📱 移动友好</h3>
-                <p>完美适配手机和平板，出行必备</p>
-            </div>
-            
-            <div class="feature">
-                <h3>🗺️ 智能导航</h3>
-                <p>集成高德地图，一键获取导航路线</p>
+            <div class="travel-cards">
+                <div class="travel-card" onclick="window.location.href='beijing_trip_qrcode.html'">
+                    <h4>🏛️ 北京3日游</h4>
+                    <p>经典北京文化之旅，包含故宫、天坛、长城等必游景点，适合家庭出行</p>
+                    <a href="beijing_trip_qrcode.html" class="travel-link">查看行程</a>
+                </div>
+                
+                <div class="travel-card" onclick="window.location.href='hulunbeier_travel_guide.html'">
+                    <h4>🏔️ 呼伦贝尔房车游</h4>
+                    <p>2025年7月呼伦贝尔草原房车亲子游，包含详细路线和注意事项</p>
+                    <a href="hulunbeier_travel_guide.html" class="travel-link">查看行程</a>
+                </div>
             </div>
         </div>
-        
+
+        <div class="section">
+            <h2>🛠️ AI 辅助功能</h2>
+            <div class="info">
+                <h3>智能写作助手</h3>
+                <p>本站已接入AI辅助写作功能，可以帮助我快速创建和更新各种内容：</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>创建新的功能页面</li>
+                    <li>优化现有内容</li>
+                    <li>保持统一的设计风格</li>
+                    <li>提供专业的内容建议</li>
+                </ul>
+            </div>
+        </div>
+
         <div class="footer">
-            <p>© 2024 Soda Code. Powered by GitHub Pages.</p>
-            <p>最后更新：<span id="updateTime"></span></p>
+            <p>© 2024 Soda Code. Powered by GitHub Pages & AI Assistant.</p>
+            <p>最后更新：<span class="update-time" id="updateTime"></span></p>
         </div>
     </div>
     
@@ -204,17 +310,34 @@
         // 显示当前时间
         document.getElementById('updateTime').textContent = new Date().toLocaleString('zh-CN');
         
-        // 简单的欢迎动画
+        // 页面加载动画
         document.addEventListener('DOMContentLoaded', function() {
-            const container = document.querySelector('.container');
-            container.style.opacity = '0';
-            container.style.transform = 'translateY(20px)';
-            
-            setTimeout(() => {
-                container.style.transition = 'all 0.6s ease';
-                container.style.opacity = '1';
-                container.style.transform = 'translateY(0)';
-            }, 100);
+            const sections = document.querySelectorAll('.section, .header, .footer');
+            sections.forEach((section, index) => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    section.style.transition = 'all 0.6s ease';
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+        
+        // 阻止卡片点击时的链接冒泡
+        document.querySelectorAll('.card-link, .travel-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+        });
+        
+        // 平滑滚动到旅游规划部分
+        document.querySelector('a[href="#travel-section"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('travel-section').scrollIntoView({
+                behavior: 'smooth'
+            });
         });
     </script>
 </body>
