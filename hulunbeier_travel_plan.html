@@ -279,6 +279,66 @@
             box-shadow: 0 10px 25px rgba(52, 152, 219, 0.6);
         }
 
+        .location-link {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .location-link:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            margin: 15px 0;
+            flex-wrap: wrap;
+        }
+
+        .action-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.9em;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .action-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            text-decoration: none;
+            color: white;
+        }
+
+        .nav-btn {
+            background: #e74c3c;
+            border-color: #c0392b;
+        }
+
+        .nav-btn:hover {
+            background: #c0392b;
+        }
+
+        .camping-btn {
+            background: #27ae60;
+            border-color: #229954;
+        }
+
+        .camping-btn:hover {
+            background: #229954;
+        }
+
         .highlight {
             background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
             padding: 20px;
@@ -371,10 +431,14 @@
                     <div class="date">2025年7月19日（周六）</div>
                     <div class="route-info">
                         <h4>🛬 行程安排</h4>
-                        <p><strong>15:00</strong> 抵达海拉尔机场，提取房车</p>
-                        <p><strong>16:00-18:00</strong> 前往莫日格勒河（52.9公里，约52分钟）</p>
+                        <p><strong>15:00</strong> 抵达<a href="https://uri.amap.com/marker?position=119.830312,49.209297&name=呼伦贝尔海拉尔机场" target="_blank" class="location-link">海拉尔机场</a>，提取房车</p>
+                        <p><strong>16:00-18:00</strong> 前往<a href="https://uri.amap.com/marker?position=119.779039,49.511658&name=莫日格勒河" target="_blank" class="location-link">莫日格勒河</a>（52.9公里，约52分钟）</p>
                         <p><strong>18:00-20:00</strong> 莫日格勒河景区游览，拍照</p>
                         <p><strong>20:00</strong> 在莫日格勒河附近找房车露营地过夜</p>
+                        <div class="action-buttons">
+                            <a href="https://uri.amap.com/navigation?to=119.779039,49.511658&callnative=1" target="_blank" class="action-btn nav-btn">🧭 去导航</a>
+                            <a href="https://uri.amap.com/search?query=房车露营地&around=119.779039,49.511658&radius=5000&callnative=1" target="_blank" class="action-btn camping-btn">🏕️ 搜索附近房车露营地</a>
+                        </div>
                         <div class="route-details">
                             <div class="route-item">
                                 <strong>🚗 驾驶距离</strong><br>52.9公里
@@ -394,11 +458,15 @@
                     <div class="date">2025年7月20日（周日）</div>
                     <div class="route-info">
                         <h4>🚗 行程安排</h4>
-                        <p><strong>08:00-09:00</strong> 早餐，继续莫日格勒河游览</p>
-                        <p><strong>09:00-12:30</strong> 前往室韦口岸（265.8公里，约3小时27分钟）</p>
-                        <p><strong>12:30-14:00</strong> 室韦镇用餐</p>
-                        <p><strong>14:00-18:00</strong> 室韦口岸、额尔古纳河游览</p>
+                        <p><strong>08:00-09:00</strong> 早餐，继续<a href="https://uri.amap.com/marker?position=119.779039,49.511658&name=莫日格勒河" target="_blank" class="location-link">莫日格勒河</a>游览</p>
+                        <p><strong>09:00-12:30</strong> 前往<a href="https://uri.amap.com/marker?position=119.895746,51.334108&name=室韦口岸" target="_blank" class="location-link">室韦口岸</a>（265.8公里，约3小时27分钟）</p>
+                        <p><strong>12:30-14:00</strong> <a href="https://uri.amap.com/marker?position=119.895746,51.334108&name=室韦镇" target="_blank" class="location-link">室韦镇</a>用餐</p>
+                        <p><strong>14:00-18:00</strong> 室韦口岸、<a href="https://uri.amap.com/marker?position=119.895746,51.334108&name=额尔古纳河" target="_blank" class="location-link">额尔古纳河</a>游览</p>
                         <p><strong>18:00</strong> 室韦镇住宿或房车露营</p>
+                        <div class="action-buttons">
+                            <a href="https://uri.amap.com/navigation?to=119.895746,51.334108&callnative=1" target="_blank" class="action-btn nav-btn">🧭 去导航</a>
+                            <a href="https://uri.amap.com/search?query=房车露营地&around=119.895746,51.334108&radius=5000&callnative=1" target="_blank" class="action-btn camping-btn">🏕️ 搜索附近房车露营地</a>
+                        </div>
                         <div class="route-details">
                             <div class="route-item">
                                 <strong>🚗 驾驶距离</strong><br>265.8公里
@@ -418,11 +486,15 @@
                     <div class="date">2025年7月21日（周一）</div>
                     <div class="route-info">
                         <h4>🚗 行程安排</h4>
-                        <p><strong>08:00-09:00</strong> 早餐，室韦小镇漫步</p>
-                        <p><strong>09:00-14:30</strong> 前往满洲里（367.2公里，约5小时36分钟）</p>
-                        <p><strong>14:30-15:30</strong> 满洲里用餐</p>
-                        <p><strong>15:30-19:00</strong> 满洲里口岸、套娃景区游览</p>
+                        <p><strong>08:00-09:00</strong> 早餐，<a href="https://uri.amap.com/marker?position=119.895746,51.334108&name=室韦小镇" target="_blank" class="location-link">室韦小镇</a>漫步</p>
+                        <p><strong>09:00-14:30</strong> 前往<a href="https://uri.amap.com/marker?position=117.4,49.6&name=满洲里" target="_blank" class="location-link">满洲里</a>（367.2公里，约5小时36分钟）</p>
+                        <p><strong>14:30-15:30</strong> <a href="https://uri.amap.com/marker?position=117.4,49.6&name=满洲里市区" target="_blank" class="location-link">满洲里</a>用餐</p>
+                        <p><strong>15:30-19:00</strong> <a href="https://uri.amap.com/marker?position=117.4,49.6&name=满洲里口岸" target="_blank" class="location-link">满洲里口岸</a>、<a href="https://uri.amap.com/marker?position=117.378581,49.599944&name=套娃景区" target="_blank" class="location-link">套娃景区</a>游览</p>
                         <p><strong>19:00</strong> 满洲里市区住宿或房车营地</p>
+                        <div class="action-buttons">
+                            <a href="https://uri.amap.com/navigation?to=117.4,49.6&callnative=1" target="_blank" class="action-btn nav-btn">🧭 去导航</a>
+                            <a href="https://uri.amap.com/search?query=房车露营地&around=117.4,49.6&radius=5000&callnative=1" target="_blank" class="action-btn camping-btn">🏕️ 搜索附近房车露营地</a>
+                        </div>
                         <div class="route-details">
                             <div class="route-item">
                                 <strong>🚗 驾驶距离</strong><br>367.2公里
@@ -442,11 +514,16 @@
                     <div class="date">2025年7月22日（周二）</div>
                     <div class="route-info">
                         <h4>🚗 行程安排</h4>
-                        <p><strong>08:00-09:00</strong> 早餐，满洲里市区游览</p>
-                        <p><strong>09:00-11:00</strong> 前往呼伦湖（108.9公里，约2小时4分钟）</p>
+                        <p><strong>08:00-09:00</strong> 早餐，<a href="https://uri.amap.com/marker?position=117.4,49.6&name=满洲里市区" target="_blank" class="location-link">满洲里市区</a>游览</p>
+                        <p><strong>09:00-11:00</strong> 前往<a href="https://uri.amap.com/marker?position=117.449503,48.961845&name=呼伦湖" target="_blank" class="location-link">呼伦湖</a>（108.9公里，约2小时4分钟）</p>
                         <p><strong>11:00-14:00</strong> 呼伦湖游览，湖边用餐</p>
-                        <p><strong>14:00-20:00</strong> 前往阿尔山（417.3公里，约6小时1分钟）</p>
-                        <p><strong>20:00</strong> 阿尔山市区住宿</p>
+                        <p><strong>14:00-20:00</strong> 前往<a href="https://uri.amap.com/marker?position=120.421996,47.284044&name=阿尔山" target="_blank" class="location-link">阿尔山</a>（417.3公里，约6小时1分钟）</p>
+                        <p><strong>20:00</strong> <a href="https://uri.amap.com/marker?position=120.421996,47.284044&name=阿尔山市区" target="_blank" class="location-link">阿尔山市区</a>住宿</p>
+                        <div class="action-buttons">
+                            <a href="https://uri.amap.com/navigation?to=117.449503,48.961845&callnative=1" target="_blank" class="action-btn nav-btn">🧭 去呼伦湖</a>
+                            <a href="https://uri.amap.com/navigation?to=120.421996,47.284044&callnative=1" target="_blank" class="action-btn nav-btn">🧭 去阿尔山</a>
+                            <a href="https://uri.amap.com/search?query=房车露营地&around=120.421996,47.284044&radius=5000&callnative=1" target="_blank" class="action-btn camping-btn">🏕️ 搜索附近房车露营地</a>
+                        </div>
                         <div class="route-details">
                             <div class="route-item">
                                 <strong>🚗 驾驶距离</strong><br>526.2公里
@@ -466,11 +543,15 @@
                     <div class="date">2025年7月23日（周三）</div>
                     <div class="route-info">
                         <h4>🏞️ 行程安排</h4>
-                        <p><strong>07:30</strong> 早餐后前往阿尔山国家森林公园</p>
+                        <p><strong>07:30</strong> 早餐后前往<a href="https://uri.amap.com/marker?position=120.421996,47.284044&name=阿尔山国家森林公园" target="_blank" class="location-link">阿尔山国家森林公园</a></p>
                         <p><strong>08:00-18:00</strong> 阿尔山国家森林公园深度游览</p>
-                        <p>- 天池、石塘林、杜鹃湖、驼峰岭天池</p>
-                        <p>- 大峡谷、三潭峡、地池</p>
-                        <p><strong>18:00</strong> 阿尔山市区住宿</p>
+                        <p>- <a href="https://uri.amap.com/marker?position=120.421996,47.284044&name=天池" target="_blank" class="location-link">天池</a>、<a href="https://uri.amap.com/marker?position=120.421996,47.284044&name=石塘林" target="_blank" class="location-link">石塘林</a>、<a href="https://uri.amap.com/marker?position=120.421996,47.284044&name=杜鹃湖" target="_blank" class="location-link">杜鹃湖</a>、<a href="https://uri.amap.com/marker?position=120.421996,47.284044&name=驼峰岭天池" target="_blank" class="location-link">驼峰岭天池</a></p>
+                        <p>- <a href="https://uri.amap.com/marker?position=120.421996,47.284044&name=大峡谷" target="_blank" class="location-link">大峡谷</a>、<a href="https://uri.amap.com/marker?position=120.421996,47.284044&name=三潭峡" target="_blank" class="location-link">三潭峡</a>、<a href="https://uri.amap.com/marker?position=120.421996,47.284044&name=地池" target="_blank" class="location-link">地池</a></p>
+                        <p><strong>18:00</strong> <a href="https://uri.amap.com/marker?position=120.421996,47.284044&name=阿尔山市区" target="_blank" class="location-link">阿尔山市区</a>住宿</p>
+                        <div class="action-buttons">
+                            <a href="https://uri.amap.com/navigation?to=120.421996,47.284044&callnative=1" target="_blank" class="action-btn nav-btn">🧭 去导航</a>
+                            <a href="https://uri.amap.com/search?query=房车露营地&around=120.421996,47.284044&radius=5000&callnative=1" target="_blank" class="action-btn camping-btn">🏕️ 搜索附近房车露营地</a>
+                        </div>
                         <div class="route-details">
                             <div class="route-item">
                                 <strong>🚗 驾驶距离</strong><br>园区内游览
@@ -490,11 +571,15 @@
                     <div class="date">2025年7月24日（周四）</div>
                     <div class="route-info">
                         <h4>🚗 行程安排</h4>
-                        <p><strong>08:00-09:00</strong> 早餐，阿尔山市区游览</p>
-                        <p><strong>09:00-13:30</strong> 返回海拉尔（347.6公里，约4小时29分钟）</p>
-                        <p><strong>13:30-15:00</strong> 海拉尔用餐</p>
+                        <p><strong>08:00-09:00</strong> 早餐，<a href="https://uri.amap.com/marker?position=120.421996,47.284044&name=阿尔山市区" target="_blank" class="location-link">阿尔山市区</a>游览</p>
+                        <p><strong>09:00-13:30</strong> 返回<a href="https://uri.amap.com/marker?position=119.830312,49.209297&name=海拉尔" target="_blank" class="location-link">海拉尔</a>（347.6公里，约4小时29分钟）</p>
+                        <p><strong>13:30-15:00</strong> <a href="https://uri.amap.com/marker?position=119.830312,49.209297&name=海拉尔市区" target="_blank" class="location-link">海拉尔</a>用餐</p>
                         <p><strong>15:00-18:00</strong> 海拉尔市区游览、购物</p>
                         <p><strong>18:00</strong> 海拉尔市区住宿</p>
+                        <div class="action-buttons">
+                            <a href="https://uri.amap.com/navigation?to=119.830312,49.209297&callnative=1" target="_blank" class="action-btn nav-btn">🧭 去导航</a>
+                            <a href="https://uri.amap.com/search?query=房车露营地&around=119.830312,49.209297&radius=5000&callnative=1" target="_blank" class="action-btn camping-btn">🏕️ 搜索附近房车露营地</a>
+                        </div>
                         <div class="route-details">
                             <div class="route-item">
                                 <strong>🚗 驾驶距离</strong><br>347.6公里
@@ -515,8 +600,11 @@
                     <div class="route-info">
                         <h4>✈️ 行程安排</h4>
                         <p><strong>09:00-11:00</strong> 收拾行李，退房车</p>
-                        <p><strong>11:00-12:00</strong> 前往海拉尔机场</p>
+                        <p><strong>11:00-12:00</strong> 前往<a href="https://uri.amap.com/marker?position=119.830312,49.209297&name=海拉尔机场" target="_blank" class="location-link">海拉尔机场</a></p>
                         <p><strong>13:00</strong> 航班起飞</p>
+                        <div class="action-buttons">
+                            <a href="https://uri.amap.com/navigation?to=119.830312,49.209297&callnative=1" target="_blank" class="action-btn nav-btn">🧭 去机场</a>
+                        </div>
                         <div class="route-details">
                             <div class="route-item">
                                 <strong>🚗 驾驶距离</strong><br>约20公里
