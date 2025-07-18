@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>呼伦贝尔房车旅游规划 - 2025年7月19日-26日</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header .subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+
+        .travel-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .info-card h3 {
+            color: #3498db;
+            margin-bottom: 10px;
+        }
+
+        .main-content {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            font-size: 2em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section h2::before {
+            content: '📍';
+            font-size: 1.2em;
+        }
+
+        .day-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .day-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .day-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .day-card .date {
+            font-size: 0.9em;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+
+        .route-info {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            backdrop-filter: blur(5px);
+        }
+
+        .route-info h4 {
+            color: #fff;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .route-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .route-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .scenic-spots {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .spot-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #3498db;
+            transition: transform 0.3s ease;
+        }
+
+        .spot-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .spot-card h4 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .ticket-info {
+            background: #e8f4f8;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        .ticket-info h5 {
+            color: #2980b9;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #e74c3c;
+            margin-bottom: 10px;
+        }
+
+        .restaurant-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .restaurant-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #27ae60;
+        }
+
+        .restaurant-card h4 {
+            color: #27ae60;
+            margin-bottom: 10px;
+        }
+
+        .rv-notice {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .rv-notice h4 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+
+        .rv-notice ul {
+            margin-left: 20px;
+            color: #856404;
+        }
+
+        .map-container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .map-link {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+        }
+
+        .map-link:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(52, 152, 219, 0.6);
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .highlight h4 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .tips {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        .tips h5 {
+            color: #155724;
+            margin-bottom: 10px;
+        }
+
+        .tips ul {
+            margin-left: 20px;
+            color: #155724;
+        }
+
+        .footer {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .section h2 {
+                font-size: 1.5em;
+            }
+
+            .day-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏔️ 呼伦贝尔房车旅游规划</h1>
+            <div class="subtitle">2025年7月19日-26日 · 7天6夜草原之旅</div>
+            <div class="travel-info">
+                <div class="info-card">
+                    <h3>出行时间</h3>
+                    <p>2025年7月19日-26日</p>
+                </div>
+                <div class="info-card">
+                    <h3>出行人员</h3>
+                    <p>一家三口（5岁孩子）</p>
+                </div>
+                <div class="info-card">
+                    <h3>交通工具</h3>
+                    <p>房车（海拉尔租车）</p>
+                </div>
+                <div class="info-card">
+                    <h3>总里程</h3>
+                    <p>约1560公里</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="section">
+                <h2>📅 详细行程规划</h2>
+                
+                <div class="day-card">
+                    <h3>第1天 - 抵达海拉尔</h3>
+                    <div class="date">2025年7月19日（周六）</div>
+                    <div class="route-info">
+                        <h4>🛬 行程安排</h4>
+                        <p><strong>15:00</strong> 抵达海拉尔机场，提取房车</p>
+                        <p><strong>16:00-18:00</strong> 前往莫日格勒河（52.9公里，约52分钟）</p>
+                        <p><strong>18:00-20:00</strong> 莫日格勒河景区游览，拍照</p>
+                        <p><strong>20:00</strong> 在莫日格勒河附近找房车露营地过夜</p>
+                        <div class="route-details">
+                            <div class="route-item">
+                                <strong>🚗 驾驶距离</strong><br>52.9公里
+                            </div>
+                            <div class="route-item">
+                                <strong>⏱️ 驾驶时间</strong><br>约52分钟
+                            </div>
+                            <div class="route-item">
+                                <strong>🏞️ 主要景点</strong><br>莫日格勒河
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <h3>第2天 - 莫日格勒河到室韦</h3>
+                    <div class="date">2025年7月20日（周日）</div>
+                    <div class="route-info">
+                        <h4>🚗 行程安排</h4>
+                        <p><strong>08:00-09:00</strong> 早餐，继续莫日格勒河游览</p>
+                        <p><strong>09:00-12:30</strong> 前往室韦口岸（265.8公里，约3小时27分钟）</p>
+                        <p><strong>12:30-14:00</strong> 室韦镇用餐</p>
+                        <p><strong>14:00-18:00</strong> 室韦口岸、额尔古纳河游览</p>
+                        <p><strong>18:00</strong> 室韦镇住宿或房车露营</p>
+                        <div class="route-details">
+                            <div class="route-item">
+                                <strong>🚗 驾驶距离</strong><br>265.8公里
+                            </div>
+                            <div class="route-item">
+                                <strong>⏱️ 驾驶时间</strong><br>约3小时27分钟
+                            </div>
+                            <div class="route-item">
+                                <strong>🏞️ 主要景点</strong><br>室韦口岸、额尔古纳河
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <h3>第3天 - 室韦到满洲里</h3>
+                    <div class="date">2025年7月21日（周一）</div>
+                    <div class="route-info">
+                        <h4>🚗 行程安排</h4>
+                        <p><strong>08:00-09:00</strong> 早餐，室韦小镇漫步</p>
+                        <p><strong>09:00-14:30</strong> 前往满洲里（367.2公里，约5小时36分钟）</p>
+                        <p><strong>14:30-15:30</strong> 满洲里用餐</p>
+                        <p><strong>15:30-19:00</strong> 满洲里口岸、套娃景区游览</p>
+                        <p><strong>19:00</strong> 满洲里市区住宿或房车营地</p>
+                        <div class="route-details">
+                            <div class="route-item">
+                                <strong>🚗 驾驶距离</strong><br>367.2公里
+                            </div>
+                            <div class="route-item">
+                                <strong>⏱️ 驾驶时间</strong><br>约5小时36分钟
+                            </div>
+                            <div class="route-item">
+                                <strong>🏞️ 主要景点</strong><br>满洲里口岸、套娃景区
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <h3>第4天 - 满洲里到呼伦湖到阿尔山</h3>
+                    <div class="date">2025年7月22日（周二）</div>
+                    <div class="route-info">
+                        <h4>🚗 行程安排</h4>
+                        <p><strong>08:00-09:00</strong> 早餐，满洲里市区游览</p>
+                        <p><strong>09:00-11:00</strong> 前往呼伦湖（108.9公里，约2小时4分钟）</p>
+                        <p><strong>11:00-14:00</strong> 呼伦湖游览，湖边用餐</p>
+                        <p><strong>14:00-20:00</strong> 前往阿尔山（417.3公里，约6小时1分钟）</p>
+                        <p><strong>20:00</strong> 阿尔山市区住宿</p>
+                        <div class="route-details">
+                            <div class="route-item">
+                                <strong>🚗 驾驶距离</strong><br>526.2公里
+                            </div>
+                            <div class="route-item">
+                                <strong>⏱️ 驾驶时间</strong><br>约8小时5分钟
+                            </div>
+                            <div class="route-item">
+                                <strong>🏞️ 主要景点</strong><br>呼伦湖
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <h3>第5天 - 阿尔山国家森林公园</h3>
+                    <div class="date">2025年7月23日（周三）</div>
+                    <div class="route-info">
+                        <h4>🏞️ 行程安排</h4>
+                        <p><strong>07:30</strong> 早餐后前往阿尔山国家森林公园</p>
+                        <p><strong>08:00-18:00</strong> 阿尔山国家森林公园深度游览</p>
+                        <p>- 天池、石塘林、杜鹃湖、驼峰岭天池</p>
+                        <p>- 大峡谷、三潭峡、地池</p>
+                        <p><strong>18:00</strong> 阿尔山市区住宿</p>
+                        <div class="route-details">
+                            <div class="route-item">
+                                <strong>🚗 驾驶距离</strong><br>园区内游览
+                            </div>
+                            <div class="route-item">
+                                <strong>⏱️ 游览时间</strong><br>全天
+                            </div>
+                            <div class="route-item">
+                                <strong>🏞️ 主要景点</strong><br>阿尔山国家森林公园
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <h3>第6天 - 阿尔山到海拉尔</h3>
+                    <div class="date">2025年7月24日（周四）</div>
+                    <div class="route-info">
+                        <h4>🚗 行程安排</h4>
+                        <p><strong>08:00-09:00</strong> 早餐，阿尔山市区游览</p>
+                        <p><strong>09:00-13:30</strong> 返回海拉尔（347.6公里，约4小时29分钟）</p>
+                        <p><strong>13:30-15:00</strong> 海拉尔用餐</p>
+                        <p><strong>15:00-18:00</strong> 海拉尔市区游览、购物</p>
+                        <p><strong>18:00</strong> 海拉尔市区住宿</p>
+                        <div class="route-details">
+                            <div class="route-item">
+                                <strong>🚗 驾驶距离</strong><br>347.6公里
+                            </div>
+                            <div class="route-item">
+                                <strong>⏱️ 驾驶时间</strong><br>约4小时29分钟
+                            </div>
+                            <div class="route-item">
+                                <strong>🏞️ 主要安排</strong><br>返回海拉尔
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <h3>第7天 - 海拉尔离开</h3>
+                    <div class="date">2025年7月25日（周五）</div>
+                    <div class="route-info">
+                        <h4>✈️ 行程安排</h4>
+                        <p><strong>09:00-11:00</strong> 收拾行李，退房车</p>
+                        <p><strong>11:00-12:00</strong> 前往海拉尔机场</p>
+                        <p><strong>13:00</strong> 航班起飞</p>
+                        <div class="route-details">
+                            <div class="route-item">
+                                <strong>🚗 驾驶距离</strong><br>约20公里
+                            </div>
+                            <div class="route-item">
+                                <strong>⏱️ 驾驶时间</strong><br>约30分钟
+                            </div>
+                            <div class="route-item">
+                                <strong>✈️ 航班时间</strong><br>13:00起飞
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🎫 景点门票价格与购票信息</h2>
+                <div class="scenic-spots">
+                    <div class="spot-card">
+                        <h4>🏔️ 阿尔山国家森林公园</h4>
+                        <div class="ticket-info">
+                            <h5>门票价格</h5>
+                            <div class="price">成人票：275元/人（含景区交通）</div>
+                            <div class="price">儿童票：5岁以下免费</div>
+                            <p><strong>优惠政策：</strong></p>
+                            <ul>
+                                <li>65-70岁：195元/人（半价）</li>
+                                <li>70岁以上：免费</li>
+                                <li>学生证、军官证：半价</li>
+                            </ul>
+                            <p><strong>开放时间：</strong>07:30-18:00</p>
+                            <p><strong>购票方式：</strong>现场购票或网上预订</p>
+                        </div>
+                        <div class="tips">
+                            <h5>游览建议</h5>
+                            <ul>
+                                <li>建议全天游览，景点较多</li>
+                                <li>携带防晒用品和保暖衣物</li>
+                                <li>天池海拔较高，注意高原反应</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="spot-card">
+                        <h4>🏞️ 呼伦湖</h4>
+                        <div class="ticket-info">
+                            <h5>门票价格</h5>
+                            <div class="price">成人票：40元/人</div>
+                            <div class="price">停车费：5元</div>
+                            <p><strong>开放时间：</strong>全天开放</p>
+                            <p><strong>购票方式：</strong>现场购票</p>
+                        </div>
+                        <div class="tips">
+                            <h5>游览建议</h5>
+                            <ul>
+                                <li>最佳游览时间：7-9月</li>
+                                <li>可以观鸟、拍照</li>
+                                <li>湖边风较大，注意保暖</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="spot-card">
+                        <h4>🏛️ 室韦口岸</h4>
+                        <div class="ticket-info">
+                            <h5>门票价格</h5>
+                            <div class="price">价格待确认</div>
+                            <p><strong>开放时间：</strong>07:30-11:30，14:00-19:00</p>
+                            <p><strong>购票方式：</strong>现场购票</p>
+                        </div>
+                        <div class="tips">
+                            <h5>游览建议</h5>
+                            <ul>
+                                <li>可以看到额尔古纳河对岸的俄罗斯</li>
+                                <li>体验中俄边境文化</li>
+                                <li>室韦小镇有俄罗斯族民居</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="spot-card">
+                        <h4>🌊 莫日格勒河</h4>
+                        <div class="ticket-info">
+                            <h5>门票价格</h5>
+                            <div class="price">景区交通车票</div>
+                            <p><strong>开放时间：</strong>全天开放</p>
+                            <p><strong>购票方式：</strong>现场购票</p>
+                        </div>
+                        <div class="tips">
+                            <h5>游览建议</h5>
+                            <ul>
+                                <li>被誉为"天下第一曲水"</li>
+                                <li>最佳拍照时间：日出日落</li>
+                                <li>可以俯瞰河流蜿蜒的美景</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🚐 房车旅游注意事项</h2>
+                <div class="rv-notice">
+                    <h4>🚗 房车准入政策</h4>
+                    <ul>
+                        <li>呼伦贝尔地区支持房车旅游，各景区基本允许房车通行</li>
+                        <li>阿尔山国家森林公园内可以自驾房车，但需要购买门票</li>
+                        <li>部分景区可能有车辆限制，建议提前咨询</li>
+                        <li>房车露营需要选择合适的露营地，不要随意停放</li>
+                    </ul>
+                </div>
+
+                <div class="rv-notice">
+                    <h4>⚠️ 房车使用注意事项</h4>
+                    <ul>
+                        <li>7月是旺季，提前预订房车和露营地</li>
+                        <li>草原地区信号可能不稳定，下载离线地图</li>
+                        <li>准备充足的食物和饮用水</li>
+                        <li>注意天气变化，草原昼夜温差大</li>
+                        <li>遵守交通规则，山区道路谨慎驾驶</li>
+                        <li>垃圾不要随意丢弃，保护环境</li>
+                    </ul>
+                </div>
+
+                <div class="highlight">
+                    <h4>🏕️ 推荐露营地</h4>
+                    <p><strong>莫日格勒河畔露营地：</strong>风景优美，可以看日出日落</p>
+                    <p><strong>室韦镇房车营地：</strong>设施完善，靠近景区</p>
+                    <p><strong>满洲里房车营地：</strong>城市配套设施齐全</p>
+                    <p><strong>阿尔山房车营地：</strong>森林环境，空气清新</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🍽️ 美食推荐</h2>
+                <div class="restaurant-grid">
+                    <div class="restaurant-card">
+                        <h4>🥩 海拉尔美食</h4>
+                        <p><strong>推荐菜品：</strong></p>
+                        <ul>
+                            <li>手扒羊肉 - 草原特色</li>
+                            <li>烤羊腿 - 传统美食</li>
+                            <li>海拉尔啤酒 - 当地特产</li>
+                            <li>蓝莓果酒 - 呼伦贝尔特色</li>
+                        </ul>
+                        <p><strong>用餐建议：</strong>选择当地人推荐的餐厅</p>
+                    </div>
+
+                    <div class="restaurant-card">
+                        <h4>🍖 满洲里美食</h4>
+                        <p><strong>卢布里西餐厅</strong>（强烈推荐）</p>
+                        <p>📍 位置：满洲里三道街</p>
+                        <p><strong>推荐菜品：</strong></p>
+                        <ul>
+                            <li>俄式牛排 - 正宗俄餐</li>
+                            <li>俄罗斯大肉串</li>
+                            <li>酸黄瓜 - 俄式小菜</li>
+                            <li>红菜汤 - 经典俄汤</li>
+                        </ul>
+                        <p><strong>特色：</strong>中俄蒙三国风味</p>
+                    </div>
+
+                    <div class="restaurant-card">
+                        <h4>🍄 阿尔山美食</h4>
+                        <p><strong>推荐菜品：</strong></p>
+                        <ul>
+                            <li>野生蘑菇 - 大兴安岭特产</li>
+                            <li>山野菜 - 纯天然</li>
+                            <li>森林野味 - 当地特色</li>
+                            <li>矿泉水煮鱼 - 阿尔山特色</li>
+                        </ul>
+                        <p><strong>特色：</strong>森林野味和山野菜</p>
+                    </div>
+
+                    <div class="restaurant-card">
+                        <h4>🐟 呼伦湖美食</h4>
+                        <p><strong>推荐菜品：</strong></p>
+                        <ul>
+                            <li>呼伦湖全鱼宴 - 必尝</li>
+                            <li>白鱼 - 湖中特产</li>
+                            <li>湖虾 - 鲜美可口</li>
+                            <li>鲫鱼 - 营养丰富</li>
+                        </ul>
+                        <p><strong>特色：</strong>湖鲜为主，120多种鱼菜</p>
+                    </div>
+                </div>
+
+                <div class="highlight">
+                    <h4>🍖 呼伦贝尔特色美食必尝清单</h4>
+                    <ul>
+                        <li><strong>手扒羊肉：</strong>草原牧民传统食品，原汁原味</li>
+                        <li><strong>烤羊腿：</strong>外焦内嫩，香味扑鼻</li>
+                        <li><strong>奶茶：</strong>蒙古族传统热饮，搭配奶酪</li>
+                        <li><strong>草原白蘑：</strong>珍贵菌类，营养丰富</li>
+                        <li><strong>牛肉干：</strong>便于携带的特色食品</li>
+                        <li><strong>蓝莓制品：</strong>7-8月新鲜蓝莓盛产</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🗺️ 路线地图展示</h2>
+                <div class="map-container">
+                    <h3>📍 完整路线地图</h3>
+                    <p>点击下方按钮在高德地图中查看完整的7天6夜旅游路线</p>
+                    <a href="amapuri://workInAmap/createWithToken?polymericId=mcp_8c6124e8a9a84fbfb03daba3318bf82a&from=MCP" class="map-link">🗺️ 在高德地图中查看完整路线</a>
+                    <div style="margin-top: 20px; background: #f8f9fa; padding: 20px; border-radius: 10px;">
+                        <h4>🗺️ 分段导航链接</h4>
+                        <p>如果上方链接无法打开，请使用以下分段导航：</p>
+                        <div style="margin: 10px 0;">
+                            <a href="https://uri.amap.com/navigation?from=119.830312,49.209297&to=119.779039,49.511658&callnative=1" target="_blank" style="color: #3498db; text-decoration: none;">
+                                📍 海拉尔机场 → 莫日格勒河 (52.9公里)
+                            </a>
+                        </div>
+                        <div style="margin: 10px 0;">
+                            <a href="https://uri.amap.com/navigation?from=119.779039,49.511658&to=119.895746,51.334108&callnative=1" target="_blank" style="color: #3498db; text-decoration: none;">
+                                📍 莫日格勒河 → 室韦口岸 (265.8公里)
+                            </a>
+                        </div>
+                        <div style="margin: 10px 0;">
+                            <a href="https://uri.amap.com/navigation?from=119.895746,51.334108&to=117.4,49.6&callnative=1" target="_blank" style="color: #3498db; text-decoration: none;">
+                                📍 室韦口岸 → 满洲里 (367.2公里)
+                            </a>
+                        </div>
+                        <div style="margin: 10px 0;">
+                            <a href="https://uri.amap.com/navigation?from=117.4,49.6&to=117.449503,48.961845&callnative=1" target="_blank" style="color: #3498db; text-decoration: none;">
+                                📍 满洲里 → 呼伦湖 (108.9公里)
+                            </a>
+                        </div>
+                        <div style="margin: 10px 0;">
+                            <a href="https://uri.amap.com/navigation?from=117.449503,48.961845&to=120.421996,47.284044&callnative=1" target="_blank" style="color: #3498db; text-decoration: none;">
+                                📍 呼伦湖 → 阿尔山 (417.3公里)
+                            </a>
+                        </div>
+                        <div style="margin: 10px 0;">
+                            <a href="https://uri.amap.com/navigation?from=120.421996,47.284044&to=119.830312,49.209297&callnative=1" target="_blank" style="color: #3498db; text-decoration: none;">
+                                📍 阿尔山 → 海拉尔机场 (347.6公里)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="route-summary">
+                    <h3>🚗 路线总结</h3>
+                    <div class="route-details">
+                        <div class="route-item">
+                            <strong>总里程</strong><br>约1560公里
+                        </div>
+                        <div class="route-item">
+                            <strong>总驾驶时间</strong><br>约22小时
+                        </div>
+                        <div class="route-item">
+                            <strong>主要路段</strong><br>国道、省道为主
+                        </div>
+                        <div class="route-item">
+                            <strong>路况</strong><br>良好，适合房车
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>💰 预算参考</h2>
+                <div class="scenic-spots">
+                    <div class="spot-card">
+                        <h4>🎫 门票费用</h4>
+                        <ul>
+                            <li>阿尔山国家森林公园：550元（2大人）</li>
+                            <li>呼伦湖：80元（2大人）</li>
+                            <li>其他景点：约200元</li>
+                            <li><strong>门票总计：约830元</strong></li>
+                        </ul>
+                    </div>
+
+                    <div class="spot-card">
+                        <h4>🚐 房车费用</h4>
+                        <ul>
+                            <li>房车租赁：约3000-5000元/周</li>
+                            <li>油费：约1200元（1560公里）</li>
+                            <li>露营费：约500元（6晚）</li>
+                            <li><strong>交通总计：约4700-6700元</strong></li>
+                        </ul>
+                    </div>
+
+                    <div class="spot-card">
+                        <h4>🍽️ 餐饮费用</h4>
+                        <ul>
+                            <li>正餐：约150元/餐/3人</li>
+                            <li>早餐：约50元/餐/3人</li>
+                            <li>7天用餐：约1400元</li>
+                            <li><strong>餐饮总计：约1400元</strong></li>
+                        </ul>
+                    </div>
+
+                    <div class="spot-card">
+                        <h4>💸 总预算估算</h4>
+                        <ul>
+                            <li>门票：830元</li>
+                            <li>交通：4700-6700元</li>
+                            <li>餐饮：1400元</li>
+                            <li>其他：500元</li>
+                            <li><strong>总计：约7430-9430元</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>📝 特别提醒</h2>
+                <div class="tips">
+                    <h5>🎒 行前准备</h5>
+                    <ul>
+                        <li>防晒用品（紫外线强）</li>
+                        <li>保暖衣物（昼夜温差大）</li>
+                        <li>防蚊虫叮咬用品</li>
+                        <li>常用药品（感冒药、肠胃药）</li>
+                        <li>充电宝、车载充电器</li>
+                        <li>足够的现金（部分地区信号不好）</li>
+                    </ul>
+                </div>
+
+                <div class="tips">
+                    <h5>👶 儿童友好提醒</h5>
+                    <ul>
+                        <li>5岁儿童大部分景点免费</li>
+                        <li>准备儿童防晒霜和帽子</li>
+                        <li>带上儿童喜欢的零食</li>
+                        <li>考虑儿童的体力，适当安排休息</li>
+                        <li>草原上注意看管好孩子</li>
+                    </ul>
+                </div>
+
+                <div class="tips">
+                    <h5>🌡️ 7月天气特点</h5>
+                    <ul>
+                        <li>平均气温：15-25°C</li>
+                        <li>早晚较凉，需要外套</li>
+                        <li>紫外线强，注意防晒</li>
+                        <li>可能有雷阵雨，携带雨具</li>
+                        <li>草原风大，注意保暖</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <h3>🌟 祝您旅途愉快！</h3>
+            <p>这份规划为您提供了详细的呼伦贝尔房车旅游指南，包含路线、景点、美食和实用信息。</p>
+            <p>在广袤的草原上，带着家人一起创造美好的回忆吧！</p>
+            <p style="margin-top: 20px; font-size: 0.9em; color: #7f8c8d;">
+                📞 如需更多信息，请联系当地旅游局或房车租赁公司<br>
+                🗓️ 制作日期：2025年7月18日
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
