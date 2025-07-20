@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>呼伦贝尔5日游简洁版 - 7月21-25日</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #e8f5e8 0%, #f0f8ff 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #4CAF50 0%, #2196F3 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .day-section {
+            padding: 25px 30px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .day-section:last-child {
+            border-bottom: none;
+        }
+        
+        .day-title {
+            background: linear-gradient(135deg, #4CAF50 0%, #2196F3 100%);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .day-number {
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        
+        .distance-info {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.9em;
+        }
+        
+        .schedule {
+            display: grid;
+            gap: 15px;
+        }
+        
+        .activity {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #4CAF50;
+        }
+        
+        .activity h4 {
+            color: #2c5530;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+        
+        .activity p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .nav-button {
+            background: linear-gradient(135deg, #4CAF50 0%, #2196F3 100%);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+        
+        .nav-button:hover {
+            transform: translateY(-1px);
+            text-decoration: none;
+            color: white;
+        }
+        
+        .total-distance {
+            background: linear-gradient(135deg, #FF9800 0%, #FF5722 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 30px;
+            text-align: center;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 30px;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .day-title {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+            
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .day-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌿 呼伦贝尔5日游</h1>
+            <p>简洁版规划 | 2024年7月21-25日</p>
+        </div>
+
+        <div class="total-distance">
+            <h3>📍 总体路线信息</h3>
+            <p><strong>总里程：</strong>约 929 公里 | <strong>总时间：</strong>约 48.5 小时</p>
+        </div>
+
+        <div class="warning">
+            <strong>⚠️ 重要提醒：</strong> 建议提前预订住宿，7月是旅游旺季。驾驶时注意安全，部分路段为乡村道路。
+        </div>
+
+        <div class="day-section">
+            <div class="day-title">
+                <div class="day-number">Day 1 - 7月21日</div>
+                <div class="distance-info">136公里 | 2小时</div>
+            </div>
+            <div class="schedule">
+                <div class="activity">
+                    <h4>🌱 上午：草原在这里滑草场</h4>
+                    <p>体验滑草、小火车等草原娱乐项目</p>
+                    <a href="javascript:void(0)" onclick="window.open('https://uri.amap.com/marker?position=119.644897,50.195102&name=草原在这里旅游景区&src=Soda')" class="nav-button">📍 导航前往</a>
+                </div>
+                <div class="activity">
+                    <h4>🐎 下午：恩和兄弟马场骑马</h4>
+                    <p>体验草原骑马乐趣，感受马背文化</p>
+                    <a href="javascript:void(0)" onclick="window.open('https://uri.amap.com/marker?position=119.908140,50.818712&name=兄弟马场&src=Soda')" class="nav-button">📍 导航前往</a>
+                </div>
+                <div class="activity">
+                    <h4>🏨 晚上：恩和市区住宿</h4>
+                    <p>体验俄罗斯民族风情，品尝当地美食</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="day-section">
+            <div class="day-title">
+                <div class="day-number">Day 2 - 7月22日</div>
+                <div class="distance-info">335公里 | 5小时</div>
+            </div>
+            <div class="schedule">
+                <div class="activity">
+                    <h4>🏛️ 上午：恩和逛逛就走</h4>
+                    <p>简单游览恩和俄罗斯民族乡</p>
+                </div>
+                <div class="activity">
+                    <h4>🇷🇺 下午：满洲里国门景区</h4>
+                    <p>参观中俄边境国门，了解边境文化</p>
+                    <a href="javascript:void(0)" onclick="window.open('https://uri.amap.com/marker?position=117.353708,49.630182&name=中俄边境旅游区-国门景区&src=Soda')" class="nav-button">📍 导航前往</a>
+                </div>
+                <div class="activity">
+                    <h4>🏨 晚上：成吉思汗拴马桩附近住宿</h4>
+                    <p>准备明天游览拴马桩景点</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="day-section">
+            <div class="day-title">
+                <div class="day-number">Day 3 - 7月23日</div>
+                <div class="distance-info">97公里 + 361公里 | 7.5小时</div>
+            </div>
+            <div class="schedule">
+                <div class="activity">
+                    <h4>⚓ 上午：成吉思汗拴马桩</h4>
+                    <p>游览呼伦湖西岸的历史文化景点</p>
+                    <a href="javascript:void(0)" onclick="window.open('https://uri.amap.com/marker?position=117.125013,48.922790&name=成吉思汗拴马桩&src=Soda')" class="nav-button">📍 导航前往</a>
+                </div>
+                <div class="activity">
+                    <h4>🏔️ 下午：前往阿尔山</h4>
+                    <p>长途驾驶前往阿尔山地区</p>
+                </div>
+                <div class="activity">
+                    <h4>🏨 晚上：阿尔山附近住宿</h4>
+                    <p>入住阿尔山地区酒店，准备明天游览</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="day-section">
+            <div class="day-title">
+                <div class="day-number">Day 4 - 7月24日</div>
+                <div class="distance-info">阿尔山地区游览</div>
+            </div>
+            <div class="schedule">
+                <div class="activity">
+                    <h4>🌲 全天：阿尔山国家森林公园</h4>
+                    <p>游览天池、石塘林、杜鹃湖等景点</p>
+                    <a href="javascript:void(0)" onclick="window.open('https://uri.amap.com/marker?position=119.942978,47.175966&name=阿尔山国家森林公园&src=Soda')" class="nav-button">📍 导航前往</a>
+                </div>
+                <div class="activity">
+                    <h4>🏨 晚上：海拉尔机场附近住宿</h4>
+                    <p>为明天还车做准备</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="day-section">
+            <div class="day-title">
+                <div class="day-number">Day 5 - 7月25日</div>
+                <div class="distance-info">返程日</div>
+            </div>
+            <div class="schedule">
+                <div class="activity">
+                    <h4>🚗 上午：还车</h4>
+                    <p>到达租车点办理还车手续</p>
+                </div>
+                <div class="activity">
+                    <h4>✈️ 下午：飞回</h4>
+                    <p>海拉尔机场登机返程</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 页面加载动画
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.day-section');
+            sections.forEach((section, index) => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    section.style.transition = 'all 0.6s ease';
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+        });
+    </script>
+</body>
+</html>
